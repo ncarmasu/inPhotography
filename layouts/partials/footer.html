@@ -1,0 +1,18 @@
+<footer>
+  {{ $hideCta := or (eq .RelPermalink (relLangURL "contact/")) (eq .RelPermalink (relLangURL "servicii/")) }}
+  {{ if not $hideCta }}
+  <section class="footer-cta">
+    <p class="footer-cta-text">{{ if eq .Site.Language.Lang "en" }}Let's talk about your project{{ else }}Hai să povestim despre proiectul tău{{ end }}</p>
+    <a class="footer-cta-btn" href="{{ relLangURL "contact/" }}">Contact →</a>
+  </section>
+  {{ end }}
+  {{ partialCached "social-icons.html" . }}
+  <section>
+    {{ .Site.Copyright }}
+    {{ range .Site.Menus.footer }}
+      <a {{ with .Params.rel -}}rel="{{ . }}"{{ end -}} href="{{ .URL }}">
+        {{ .Name }}
+      </a>
+    {{ end }}
+  </section>
+</footer>

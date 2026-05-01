@@ -31,6 +31,7 @@ theme = "gallery"
     name = "Narcis"
   [params.socialIcons]
     instagram = "https://www.instagram.com/inphotography.ro"
+    whatsapp = "40745560706"
     email = "mailto:inphotography@gmail.com"
   [params.gallery]
     targetRowHeight = 320
@@ -58,6 +59,10 @@ theme = "gallery"
     url = "/portofoliu/"
     weight = 5
   [[languages.ro.menu.main]]
+    name = "Servicii"
+    url = "/servicii/"
+    weight = 7
+  [[languages.ro.menu.main]]
     name = "Despre"
     url = "/about/"
     weight = 10
@@ -75,6 +80,10 @@ theme = "gallery"
     name = "Portfolio"
     url = "/en/portofoliu/"
     weight = 5
+  [[languages.en.menu.main]]
+    name = "Services"
+    url = "/en/servicii/"
+    weight = 7
   [[languages.en.menu.main]]
     name = "About"
     url = "/en/about/"

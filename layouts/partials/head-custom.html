@@ -1,8 +1,74 @@
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&display=swap" rel="stylesheet" />
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&family=Montserrat:wght@300;400;500&display=swap" rel="stylesheet" />
 
 <style>
+  /* Brand wordmark in header — Montserrat (different from Cormorant used elsewhere) */
+  body > header .header-left { display: inline-flex; align-items: center; gap: 0.75rem; }
+  body > header .brand-mark-header {
+    font-family: "Montserrat", -apple-system, "Helvetica Neue", Arial, sans-serif !important;
+    font-weight: 400;
+    font-size: 1.05rem;
+    letter-spacing: 0.12em;
+    text-decoration: none;
+    line-height: 1;
+  }
+  body > header .brand-mark-header:hover { text-decoration: none; opacity: 0.7; }
+
+  /* Desktop inline header navigation */
+  body > header .header-nav { display: none; gap: 1.5rem; align-items: center; margin-left: auto; }
+  body > header .header-nav a {
+    font-family: "Montserrat", -apple-system, "Helvetica Neue", Arial, sans-serif;
+    font-size: 0.95rem;
+    letter-spacing: 0.06em;
+    text-decoration: none;
+    padding: 0.4rem 0.2rem;
+  }
+  body > header .header-nav a:hover { opacity: 0.7; text-decoration: none; }
+  @media (min-width: 768px) {
+    body > header .header-nav { display: inline-flex; }
+    body > header > ul { display: none; }  /* hide burger on desktop */
+  }
+
+  /* Footer CTA */
+  body > footer .footer-cta {
+    text-align: center;
+    padding: 2rem 1rem;
+    margin-bottom: 1.5rem;
+    border-top: 1px solid rgba(128,128,128,0.2);
+    border-bottom: 1px solid rgba(128,128,128,0.2);
+  }
+  body > footer .footer-cta-text {
+    font-family: "Cormorant Garamond", Georgia, serif;
+    font-size: clamp(1.4rem, 3vw, 2rem);
+    font-weight: 300;
+    font-style: italic;
+    margin: 0 0 1rem;
+    letter-spacing: 0.02em;
+  }
+  body > footer .footer-cta-btn {
+    display: inline-block;
+    padding: 0.7rem 1.5rem;
+    border: 1px solid currentColor;
+    border-radius: 6px;
+    text-decoration: none;
+    font-family: "Montserrat", -apple-system, sans-serif;
+    font-size: 0.95rem;
+    letter-spacing: 0.08em;
+    transition: opacity 0.2s;
+  }
+  body > footer .footer-cta-btn:hover { opacity: 0.7; text-decoration: none; }
+
+  /* Apply Cormorant to all page titles/headings (galleries, services, about, contact) */
+  main hgroup h1,
+  main h1, main h2, main h3 {
+    font-family: "Cormorant Garamond", Georgia, serif;
+    font-weight: 400;
+    letter-spacing: 0.03em;
+  }
+  main hgroup h1 { font-weight: 300; letter-spacing: 0.05em; }
+  main hgroup p { font-style: italic; opacity: 0.85; }
+
   /* Hero brand wordmark */
   .brand-hero {
     max-width: 1280px;
