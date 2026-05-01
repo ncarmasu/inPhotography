@@ -1,4 +1,52 @@
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&display=swap" rel="stylesheet" />
+
 <style>
+  /* Hero brand wordmark */
+  .brand-hero {
+    max-width: 1280px;
+    margin: 2rem auto 2.5rem;
+    padding: 1rem 0 2rem;
+    text-align: center;
+    font-family: "Cormorant Garamond", Georgia, serif;
+  }
+  .brand-hero .brand-mark {
+    position: relative;
+    display: inline-block;
+    font-weight: 300;
+    font-size: clamp(2.4rem, 6vw, 4.5rem);
+    letter-spacing: 0.08em;
+    line-height: 1;
+    padding: 0 0.6em;
+  }
+  /* Median line through the wordmark */
+  .brand-hero .brand-mark::before,
+  .brand-hero .brand-mark::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    width: 22vw;
+    max-width: 280px;
+    height: 1px;
+    background: currentColor;
+    opacity: 0.55;
+  }
+  .brand-hero .brand-mark::before { right: 100%; }
+  .brand-hero .brand-mark::after  { left:  100%; }
+  .brand-hero .brand-tagline {
+    margin: 0.9rem 0 0;
+    font-style: italic;
+    font-weight: 300;
+    font-size: clamp(0.95rem, 1.6vw, 1.2rem);
+    letter-spacing: 0.04em;
+    opacity: 0.8;
+  }
+  @media (max-width: 720px) {
+    .brand-hero .brand-mark::before,
+    .brand-hero .brand-mark::after { width: 8vw; }
+  }
+
   /* Featured portfolio (large card) */
   .featured-portfolio { margin: 1.5rem auto 2.5rem; max-width: 1280px; }
   .featured-portfolio .card { display: block; position: relative; overflow: hidden; border-radius: 8px; }
@@ -10,14 +58,16 @@
     background: linear-gradient(to top, rgba(0,0,0,0.75), rgba(0,0,0,0));
     color: #fff;
   }
-  .featured-portfolio .card h2 { margin: 0 0 0.25rem; font-size: 1.75rem; }
-  .featured-portfolio .card p { margin: 0; opacity: 0.85; }
+  .featured-portfolio .card h2 { margin: 0 0 0.25rem; font-size: 1.75rem; font-family: "Cormorant Garamond", Georgia, serif; font-weight: 400; letter-spacing: 0.04em; }
+  .featured-portfolio .card p { margin: 0; opacity: 0.85; font-style: italic; }
 
   /* Categories row (3 in a row on desktop) */
   .categories-row { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; }
+  .categories-row .card h2 { font-family: "Cormorant Garamond", Georgia, serif; font-weight: 400; letter-spacing: 0.04em; }
   @media (max-width: 720px) {
     .categories-row { grid-template-columns: 1fr; }
     .featured-portfolio .card figure { aspect-ratio: 4 / 3; }
     .featured-portfolio .card h2 { font-size: 1.25rem; }
   }
 </style>
+

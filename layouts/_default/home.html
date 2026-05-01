@@ -2,6 +2,11 @@
   {{ $portofoliu := .Site.GetPage "/portofoliu" }}
   {{ $categories := where (where .Pages "Params.private" "ne" true) "RelPermalink" "ne" $portofoliu.RelPermalink }}
 
+  <section class="brand-hero">
+    <div class="brand-mark">INPhotography</div>
+    <p class="brand-tagline">{{ .Site.Params.description | default .Site.Title }}</p>
+  </section>
+
   {{ with $portofoliu }}
     <section class="featured-portfolio">
       {{ partial "album-card.html" . }}

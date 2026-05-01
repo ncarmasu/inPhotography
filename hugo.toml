@@ -62,6 +62,10 @@ theme = "gallery"
     url = "/about/"
     weight = 10
   [[languages.ro.menu.main]]
+    name = "Contact"
+    url = "/contact/"
+    weight = 20
+  [[languages.ro.menu.main]]
     name = "EN"
     url = "/en/"
     weight = 99
@@ -75,6 +79,10 @@ theme = "gallery"
     name = "About"
     url = "/en/about/"
     weight = 10
+  [[languages.en.menu.main]]
+    name = "Contact"
+    url = "/en/contact/"
+    weight = 20
   [[languages.en.menu.main]]
     name = "RO"
     url = "/"
