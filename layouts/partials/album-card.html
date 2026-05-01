@@ -1,10 +1,17 @@
 {{ $gallery := partial "get-gallery.html" . }}
 {{ with $gallery }}
-  {{ $count := .imageCount }}
-  {{ if and (eq $count 0) .images }}{{ $count = len .images }}{{ end }}
+  {{/* Pick a larger thumbnail than theme default (600px) for higher visual quality */}}
+  {{ $featured := index .images 0 }}
+  {{ $covers := where .images "Params.cover" "eq" true }}
+  {{ if $covers }}{{ $featured = index $covers 0 }}{{ end }}
+  {{ $featured = $featured | default .thumbnail }}
+  {{ $thumb := .thumbnail }}
+  {{ if $featured }}
+    {{ $thumb = $featured.Filter (slice images.AutoOrient (images.Process "fit 1600x1600 q85")) }}
+  {{ end }}
   <a class="card" href="{{ .page.RelPermalink }}" title="{{ .page.Title }}">
     <figure style="background-color: {{ .color }}">
-      <img class="lazyload" width="{{ .thumbnail.Width }}" height="{{ .thumbnail.Height }}" data-src="{{ .thumbnail.RelPermalink }}" alt="{{ .page.Title }}" />
+      <img class="lazyload" width="{{ $thumb.Width }}" height="{{ $thumb.Height }}" data-src="{{ $thumb.RelPermalink }}" alt="{{ .page.Title }}" />
     </figure>
     <div>
       <h2>{{ .page.Title }}</h2>

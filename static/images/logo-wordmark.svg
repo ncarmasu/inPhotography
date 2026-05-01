@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 200" role="img" aria-label="INPhotography">
+  <style>
+    .wm { font-family: "Cormorant Garamond", "Times New Roman", serif; font-weight: 300; font-size: 88px; letter-spacing: 6px; }
+    .tag { font-family: "Cormorant Garamond", "Times New Roman", serif; font-style: italic; font-weight: 300; font-size: 22px; letter-spacing: 3px; }
+  </style>
+  <line x1="60" y1="100" x2="200" y2="100" stroke="currentColor" stroke-width="1" opacity="0.55"/>
+  <line x1="600" y1="100" x2="740" y2="100" stroke="currentColor" stroke-width="1" opacity="0.55"/>
+  <text x="400" y="115" text-anchor="middle" class="wm" fill="currentColor">INPhotography</text>
+</svg>
