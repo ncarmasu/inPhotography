@@ -1,11 +1,11 @@
-copyright = "© INPhotography.ro"
+copyright = "© inphotography"
 defaultContentLanguage = "ro"
 defaultContentLanguageInSubdir = false
 disableKinds = ["taxonomy"]
 enableRobotsTXT = true
 timeZone = "Europe/Bucharest"
 timeout = "120s"
-title = "INPhotography.ro"
+title = "inphotography"
 theme = "gallery"
 
 [languages]
@@ -13,16 +13,16 @@ theme = "gallery"
     locale = "ro_RO"
     label = "Română"
     weight = 1
-    title = "INPhotography.ro"
+    title = "inphotography"
     [languages.ro.params]
-      description = "Portofoliu de fotografie — peisaje, portrete, călătorii"
+      description = "Fotografie profesională — street, portrete și evenimente corporate."
   [languages.en]
     locale = "en_US"
     label = "English"
     weight = 2
-    title = "INPhotography.ro"
+    title = "inphotography"
     [languages.en.params]
-      description = "Photography portfolio — landscapes, portraits, travel"
+      description = "Professional photography — street, portraits and corporate events."
 
 [params]
   defaultTheme = "dark"
