@@ -1,0 +1,92 @@
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>{{ with .Title }}{{ . }} — {{ end }}{{ .Site.Title }}{{ if .IsHome }} · Fotograf evenimente corporate, headshots și portret{{ end }}</title>
+  <link rel="canonical" href="{{ .Permalink }}" />
+  <link rel="icon" type="image/svg+xml" href="{{ "images/favicon.svg" | relURL }}" />
+  <link rel="apple-touch-icon" sizes="180x180" href="{{ "images/favicon.svg" | relURL }}" />
+  <meta name="description" content="{{ with .Description }}{{ . | markdownify | plainify }}{{ else }}{{ with .Site.Params.description }}{{ . | markdownify | plainify }}{{ end }}{{ end }}" />
+  {{ if .Params.keywords }}
+    <meta name="keywords" content="{{ delimit .Params.keywords `, ` }}" />
+  {{ end }}
+  {{ if .Params.private }}
+    <meta name="robots" content="noindex, nofollow" />
+  {{ else }}
+    <meta name="robots" content="index, follow" />
+  {{ end }}
+
+  {{/* hreflang alternates for bilingual SEO */}}
+  {{ range .AllTranslations }}
+    <link rel="alternate" hreflang="{{ .Language.Lang }}" href="{{ .Permalink }}" />
+  {{ end }}
+  <link rel="alternate" hreflang="x-default" href="{{ .Site.BaseURL }}" />
+
+  {{ range .AlternativeOutputFormats -}}
+    {{ printf `<link rel="%s" type="%s" href="%s" title="%s" />` .Rel .MediaType.Type .Permalink $.Site.Title | safeHTML }}
+  {{ end -}}
+
+  {{/* OpenGraph + fallback OG image */}}
+  {{ partial "opengraph.html" . }}
+  {{ $hasOg := false }}
+  {{ $images := .Resources.ByType "image" }}
+  {{ if $images }}{{ $hasOg = true }}{{ end }}
+  {{ if not $hasOg }}
+    <meta property="og:image" content="{{ "images/og-default.jpg" | absURL }}" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:image" content="{{ "images/og-default.jpg" | absURL }}" />
+  {{ end }}
+
+  {{/* JSON-LD: ProfessionalService + Person on home; BreadcrumbList elsewhere */}}
+  {{ if .IsHome }}
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ProfessionalService",
+    "name": "INPhotography",
+    "image": "{{ "images/og-default.jpg" | absURL }}",
+    "url": "{{ .Site.BaseURL }}",
+    "telephone": "+40745560706",
+    "email": "inphotography@gmail.com",
+    "priceRange": "$$",
+    "address": { "@type": "PostalAddress", "addressLocality": "Iași", "addressCountry": "RO" },
+    "areaServed": { "@type": "Country", "name": "Romania" },
+    "founder": { "@type": "Person", "name": "Narcis", "jobTitle": "Photographer" },
+    "sameAs": [
+      "https://www.instagram.com/inphotography.ro"
+    ],
+    "description": "{{ .Site.Params.description | plainify }}"
+  }
+  </script>
+  {{ else }}
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "{{ .Site.Title }}", "item": "{{ .Site.BaseURL }}" },
+      { "@type": "ListItem", "position": 2, "name": "{{ .Title }}", "item": "{{ .Permalink }}" }
+    ]
+  }
+  </script>
+  {{ end }}
+
+  {{ $css := resources.Get "/css/main.scss" | toCSS | minify | fingerprint }}
+  <link rel="stylesheet" href="{{ $css.RelPermalink }}" />
+  {{ $params := dict
+    "closeTitle" (i18n "closeTitle")
+    "zoomTitle" (i18n "zoomTitle")
+    "arrowPrevTitle" (i18n "arrowPrevTitle")
+    "arrowNextTitle" (i18n "arrowNextTitle")
+    "errorMsg" (i18n "errorMsg")
+    "downloadTitle" (i18n "downloadTitle")
+    "boxSpacing" (default 8 .Site.Params.gallery.boxSpacing)
+    "targetRowHeight" (default 288 .Site.Params.gallery.targetRowHeight)
+    "targetRowHeightTolerance" (default 0.25 .Site.Params.gallery.targetRowHeightTolerance)
+    "enableDownload" (default true .Params.build.publishResources)
+  }}
+  {{ $js := resources.Get "js/main.js" | js.Build (dict "minify" true "params" $params) | resources.Fingerprint }}
+  <script src="{{ $js.RelPermalink }}" defer></script>
+  {{- partial "head-custom.html" . -}}
+</head>

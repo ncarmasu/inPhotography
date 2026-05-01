@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+  <rect width="64" height="64" rx="10" fill="#0a0a0a"/>
+  <text x="50%" y="50%" dy="0.36em" text-anchor="middle"
+        font-family="Cormorant Garamond, Georgia, serif"
+        font-size="34" font-weight="300" letter-spacing="0.05em"
+        fill="#fafafa">IN</text>
+</svg>

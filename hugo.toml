@@ -15,14 +15,14 @@ theme = "gallery"
     weight = 1
     title = "INPhotography"
     [languages.ro.params]
-      description = "Fotografie profesională — evenimente corporate, portrete și street."
+      description = "Fotograf profesionist disponibil în toată România, bază în Iași — evenimente corporate, headshots executive, lansări de produs și portret. Peste 15 ani experiență, 100+ proiecte."
   [languages.en]
     locale = "en_US"
     label = "English"
     weight = 2
     title = "INPhotography"
     [languages.en.params]
-      description = "Professional photography — corporate events, portraits and street."
+      description = "Professional photographer based in Iași, available across Romania — corporate events, executive headshots, product launches and portraiture. 15+ years of experience, 100+ projects."
 
 [params]
   defaultTheme = "dark"

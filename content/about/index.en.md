@@ -25,7 +25,7 @@ Across **100+ photo projects** delivered, I've worked with brands such as **Serv
 
 I work discreetly, respect the event's agenda, and deliver edited material within agreed deadlines. Every project starts with a clear conversation about purpose, deliverables, usage rights and legal framework (including GDPR) — so the photos can be used with confidence wherever you need them.
 
-**Equipment**: professional full-frame Canon body, complete set of prime and professional zoom lenses, studio and portable lighting for indoor or on-location sessions. Full backup on every shoot.
+**Equipment**: professional Canon full-frame setup with a suitable set of prime and L-series zoom lenses, studio and portable lighting for indoor or on-location sessions. Full backup on every shoot.
 
 For quotes, briefs or collaborations:
 [inphotography@gmail.com](mailto:inphotography@gmail.com) · [WhatsApp](https://wa.me/40745560706)

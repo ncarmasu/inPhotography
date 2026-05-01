@@ -3,7 +3,11 @@
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&family=Montserrat:wght@300;400;500&display=swap" rel="stylesheet" />
 
 <style>
+  /* True black background for photo work */
+  :root, html.dark { --surface-1-dark: #000; --surface-2-dark: #1a1a1a; }
+
   /* Brand wordmark in header — Montserrat (different from Cormorant used elsewhere) */
+  body > header { padding: 0.5rem 1.5rem; max-width: 1280px; margin-left: auto; margin-right: auto; }
   body > header .header-left { display: inline-flex; align-items: center; gap: 0.75rem; }
   body > header .brand-mark-header {
     font-family: "Montserrat", -apple-system, "Helvetica Neue", Arial, sans-serif !important;
@@ -72,8 +76,8 @@
   /* Hero brand wordmark */
   .brand-hero {
     max-width: 1280px;
-    margin: 2rem auto 2.5rem;
-    padding: 1rem 0 2rem;
+    margin: 1rem auto 1.5rem;
+    padding: 0.5rem 1.5rem 1.5rem;
     text-align: center;
     font-family: "Cormorant Garamond", Georgia, serif;
   }
@@ -81,7 +85,7 @@
     position: relative;
     display: inline-block;
     font-weight: 300;
-    font-size: clamp(2.4rem, 6vw, 4.5rem);
+    font-size: clamp(1.8rem, 5vw, 3.6rem);
     letter-spacing: 0.08em;
     line-height: 1;
     padding: 0 0.6em;
@@ -101,16 +105,17 @@
   .brand-hero .brand-mark::before { right: 100%; }
   .brand-hero .brand-mark::after  { left:  100%; }
   .brand-hero .brand-tagline {
-    margin: 0.9rem 0 0;
+    margin: 0.7rem 0 0;
     font-style: italic;
     font-weight: 300;
-    font-size: clamp(0.95rem, 1.6vw, 1.2rem);
+    font-size: clamp(0.95rem, 1.4vw, 1.15rem);
     letter-spacing: 0.04em;
     opacity: 0.8;
   }
   @media (max-width: 720px) {
     .brand-hero .brand-mark::before,
-    .brand-hero .brand-mark::after { width: 8vw; }
+    .brand-hero .brand-mark::after { width: 6vw; max-width: 60px; }
+    .brand-hero .brand-mark { padding: 0 0.4em; letter-spacing: 0.06em; }
   }
 
   /* Featured portfolio (large card) */
@@ -127,13 +132,37 @@
   .featured-portfolio .card h2 { margin: 0 0 0.25rem; font-size: 1.75rem; font-family: "Cormorant Garamond", Georgia, serif; font-weight: 400; letter-spacing: 0.04em; }
   .featured-portfolio .card p { margin: 0; opacity: 0.85; font-style: italic; }
 
-  /* Categories row (3 in a row on desktop) */
+  /* Categories row (3 in a row on desktop) — uniform 4:5 with smooth hover */
   .categories-row { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; }
+  .categories-row .card { transition: transform .4s ease, opacity .4s ease; }
+  .categories-row .card:hover { transform: scale(1.02); opacity: .92; }
+  .categories-row .card figure,
+  .categories-row .card > img,
+  .categories-row .card figure > img { aspect-ratio: 4 / 5 !important; width: 100%; object-fit: cover; }
   .categories-row .card h2 { font-family: "Cormorant Garamond", Georgia, serif; font-weight: 400; letter-spacing: 0.04em; }
+
+  /* Featured card hover */
+  .featured-portfolio .card { transition: opacity .4s ease; }
+  .featured-portfolio .card:hover { opacity: .92; }
+  .featured-portfolio .card figure img { transition: transform .6s ease; }
+  .featured-portfolio .card:hover figure img { transform: scale(1.02); }
+
   @media (max-width: 720px) {
     .categories-row { grid-template-columns: 1fr; }
     .featured-portfolio .card figure { aspect-ratio: 4 / 3; }
     .featured-portfolio .card h2 { font-size: 1.25rem; }
+  }
+
+  /* Footer polish */
+  body > footer { display: flex; flex-direction: column; align-items: center; gap: 1.25rem; padding: 2.5rem 1.5rem 2rem; }
+  body > footer section.social-icons { margin: 0; gap: 1.75rem; }
+  body > footer section.social-icons a { opacity: .85; transition: opacity .2s ease; }
+  body > footer section.social-icons a:hover { opacity: 1; }
+  body > footer > section:last-child {
+    border-top: 1px solid rgba(255,255,255,0.08);
+    padding-top: 1rem; margin-top: 0.5rem; width: 100%; max-width: 1280px;
+    text-align: center; font-size: 0.8rem; opacity: 0.55;
+    display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;
   }
 </style>
 

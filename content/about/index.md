@@ -31,7 +31,7 @@ Lucrez ca fotograf profesionist de **peste 15 ani**, cu accent pe trei direcții
 
 Lucrez discret, respect agendele unui eveniment și predau materialul editat în termenele convenite. Fiecare proiect începe cu o discuție clară despre scop, livrabile, drepturi de utilizare și cadru legal (inclusiv GDPR) — astfel încât pozele să fie folosite cu încredere, oriunde aveți nevoie de ele.
 
-**Echipament**: corp Canon profesional full-frame, set complet de obiective fixe și zoom-uri profesionale, lumini de studio și mobile pentru sesiuni indoor sau on-location. Backup integral pe fiecare sesiune.
+**Echipament**: echipament Canon profesional full-frame, cu set adecvat de obiective prime și zoom-uri seria L, lumini de studio și mobile pentru sesiuni indoor sau on-location. Backup integral pe fiecare sesiune.
 
 Pentru cotații, briefuri sau colaborări:
 [inphotography@gmail.com](mailto:inphotography@gmail.com) · [WhatsApp](https://wa.me/40745560706)
