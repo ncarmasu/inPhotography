@@ -1,4 +1,4 @@
 ---
 title: INPhotography
-description: Fotografie profesională — street, portrete și evenimente corporate.
+description: Fotografie profesională — evenimente corporate, portrete și street.
 ---

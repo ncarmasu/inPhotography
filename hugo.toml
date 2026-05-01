@@ -15,14 +15,14 @@ theme = "gallery"
     weight = 1
     title = "INPhotography"
     [languages.ro.params]
-      description = "Fotografie profesională — street, portrete și evenimente corporate."
+      description = "Fotografie profesională — evenimente corporate, portrete și street."
   [languages.en]
     locale = "en_US"
     label = "English"
     weight = 2
     title = "INPhotography"
     [languages.en.params]
-      description = "Professional photography — street, portraits and corporate events."
+      description = "Professional photography — corporate events, portraits and street."
 
 [params]
   defaultTheme = "dark"
@@ -54,6 +54,10 @@ theme = "gallery"
 
 [languages.ro.menu]
   [[languages.ro.menu.main]]
+    name = "Portofoliu"
+    url = "/portofoliu/"
+    weight = 5
+  [[languages.ro.menu.main]]
     name = "Despre"
     url = "/about/"
     weight = 10
@@ -64,6 +68,10 @@ theme = "gallery"
 
 [languages.en.menu]
   [[languages.en.menu.main]]
+    name = "Portfolio"
+    url = "/en/portofoliu/"
+    weight = 5
+  [[languages.en.menu.main]]
     name = "About"
     url = "/en/about/"
     weight = 10
@@ -71,3 +79,8 @@ theme = "gallery"
     name = "RO"
     url = "/"
     weight = 99
+
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true

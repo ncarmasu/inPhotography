@@ -1,0 +1,16 @@
+{{ define "main" }}
+  {{ $portofoliu := .Site.GetPage "/portofoliu" }}
+  {{ $categories := where (where .Pages "Params.private" "ne" true) "RelPermalink" "ne" $portofoliu.RelPermalink }}
+
+  {{ with $portofoliu }}
+    <section class="featured-portfolio">
+      {{ partial "album-card.html" . }}
+    </section>
+  {{ end }}
+
+  <section class="galleries categories-row">
+    {{ range $categories }}
+      {{ partial "album-card.html" . }}
+    {{ end }}
+  </section>
+{{ end }}

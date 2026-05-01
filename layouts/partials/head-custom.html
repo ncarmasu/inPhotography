@@ -1,0 +1,23 @@
+<style>
+  /* Featured portfolio (large card) */
+  .featured-portfolio { margin: 1.5rem auto 2.5rem; max-width: 1280px; }
+  .featured-portfolio .card { display: block; position: relative; overflow: hidden; border-radius: 8px; }
+  .featured-portfolio .card figure { margin: 0; aspect-ratio: 16 / 9; }
+  .featured-portfolio .card figure img { width: 100%; height: 100%; object-fit: cover; display: block; }
+  .featured-portfolio .card > div {
+    position: absolute; left: 0; right: 0; bottom: 0;
+    padding: 1.25rem 1.5rem;
+    background: linear-gradient(to top, rgba(0,0,0,0.75), rgba(0,0,0,0));
+    color: #fff;
+  }
+  .featured-portfolio .card h2 { margin: 0 0 0.25rem; font-size: 1.75rem; }
+  .featured-portfolio .card p { margin: 0; opacity: 0.85; }
+
+  /* Categories row (3 in a row on desktop) */
+  .categories-row { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; }
+  @media (max-width: 720px) {
+    .categories-row { grid-template-columns: 1fr; }
+    .featured-portfolio .card figure { aspect-ratio: 4 / 3; }
+    .featured-portfolio .card h2 { font-size: 1.25rem; }
+  }
+</style>

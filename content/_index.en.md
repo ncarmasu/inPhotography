@@ -1,4 +1,4 @@
 ---
 title: INPhotography
-description: Professional photography — street, portraits and corporate events.
+description: Professional photography — corporate events, portraits and street.
 ---
