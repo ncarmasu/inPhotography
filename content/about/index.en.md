@@ -1,21 +1,27 @@
 ---
 title: Narcis — professional photographer
-description: Professional photographer — corporate events, portraits and street.
+description: Professional photographer based in Iași, available across Romania — corporate events, headshots and portraiture.
 ---
 
 <style>
-.about-hero { display: flex; gap: 2.5rem; align-items: flex-start; margin: 1rem 0 2rem; }
-.about-hero .about-portrait { flex: 0 0 38%; max-width: 380px; border-radius: 6px; height: auto; display: block; }
-.about-hero .about-text { flex: 1; }
+.about-portrait {
+  float: left;
+  width: 38%;
+  max-width: 380px;
+  margin: 0.25rem 1.75rem 0.75rem 0;
+  border-radius: 6px;
+  display: block;
+}
+.about-text { overflow: hidden; }
+.about-text::after { content: ""; display: block; clear: both; }
 @media (max-width: 720px) {
-  .about-hero { flex-direction: column; gap: 1.5rem; }
-  .about-hero .about-portrait { flex: 0 0 auto; max-width: 100%; width: 100%; }
+  .about-portrait { float: none; width: 100%; max-width: 100%; margin: 0 0 1.25rem; }
 }
 </style>
 
-<div class="about-hero">
-  <img src="/about/portrait.jpg" alt="Narcis — INPhotography" class="about-portrait" />
-  <div class="about-text" markdown="1">
+<img src="/about/portrait.jpg" alt="Narcis — INPhotography" class="about-portrait" />
+
+<div class="about-text">
 
 Hi, I'm **Narcis**.
 
@@ -30,5 +36,4 @@ I work discreetly, respect the event's agenda, and deliver edited material withi
 For quotes, briefs or collaborations:
 [inphotography@gmail.com](mailto:inphotography@gmail.com) · [WhatsApp](https://wa.me/40745560706)
 
-  </div>
 </div>
