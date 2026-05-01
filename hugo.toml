@@ -1,0 +1,73 @@
+copyright = "© INPhotography.ro"
+defaultContentLanguage = "ro"
+defaultContentLanguageInSubdir = false
+disableKinds = ["taxonomy"]
+enableRobotsTXT = true
+timeZone = "Europe/Bucharest"
+timeout = "120s"
+title = "INPhotography.ro"
+theme = "gallery"
+
+[languages]
+  [languages.ro]
+    locale = "ro_RO"
+    label = "Română"
+    weight = 1
+    title = "INPhotography.ro"
+    [languages.ro.params]
+      description = "Portofoliu de fotografie — peisaje, portrete, călătorii"
+  [languages.en]
+    locale = "en_US"
+    label = "English"
+    weight = 2
+    title = "INPhotography.ro"
+    [languages.en.params]
+      description = "Photography portfolio — landscapes, portraits, travel"
+
+[params]
+  defaultTheme = "dark"
+  [params.author]
+    email = "inphotography@gmail.com"
+    name = "Narcis"
+  [params.socialIcons]
+    instagram = "https://www.instagram.com/inphotography.ro"
+    email = "mailto:inphotography@gmail.com"
+  [params.gallery]
+    targetRowHeight = 320
+
+[outputs]
+  home = ["HTML", "RSS"]
+  page = ["HTML"]
+  section = ["HTML"]
+
+[imaging]
+  quality = 80
+  resampleFilter = "CatmullRom"
+  [imaging.exif]
+    disableDate = false
+    disableLatLong = true
+    includeFields = "ImageDescription|Orientation"
+
+[services]
+  [services.rss]
+    limit = 100
+
+[languages.ro.menu]
+  [[languages.ro.menu.main]]
+    name = "Despre"
+    url = "/about/"
+    weight = 10
+  [[languages.ro.menu.main]]
+    name = "EN"
+    url = "/en/"
+    weight = 99
+
+[languages.en.menu]
+  [[languages.en.menu.main]]
+    name = "About"
+    url = "/en/about/"
+    weight = 10
+  [[languages.en.menu.main]]
+    name = "RO"
+    url = "/"
+    weight = 99
