@@ -55,17 +55,17 @@ Clear packages, predictable deliverables. Every project starts with a 15-minute 
   </div>
 
   <div class="service-card">
-    <h3>Product launch &amp; brand editorial</h3>
-    <p class="audience">Sessions designed for integrated communication</p>
+    <h3>Fine-art prints</h3>
+    <p class="audience">For office decor, reception, board rooms, clinics or hotels</p>
     <ul>
-      <li>Brief &amp; moodboard with the marketing team</li>
-      <li>Product and/or lifestyle session</li>
-      <li>Variants for web, print, social</li>
-      <li>Frames adapted to multiple formats (1:1, 4:5, 16:9)</li>
-      <li>Extended usage rights</li>
+      <li>Selected works in Open Edition and Limited Edition</li>
+      <li>Giclée printing on archival paper</li>
+      <li>Sizes from A3 to 70×100 cm or custom</li>
+      <li>Optional passe-partout and framing</li>
+      <li>Test print available before final order</li>
     </ul>
     <p class="price">Price on request</p>
-    <a class="cta" href="/en/contact/">Request a quote →</a>
+    <a class="cta" href="/en/print/">View the gallery →</a>
   </div>
 
   <div class="service-card">

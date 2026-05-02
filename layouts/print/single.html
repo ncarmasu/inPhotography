@@ -1,0 +1,113 @@
+{{ define "main" }}
+  {{ partial "title.html" . }}
+
+  {{ $isEN := eq .Site.Language.Lang "en" }}
+  {{ $lblFormats := cond $isEN "Available sizes" "Formate disponibile" }}
+  {{ $lblPaper := cond $isEN "Recommended paper" "Suport recomandat" }}
+  {{ $lblPrice := cond $isEN "Price" "Preț" }}
+  {{ $lblClose := cond $isEN "Close" "Închide" }}
+  {{ $lblRequest := cond $isEN "Request this print" "Solicită acest print" }}
+  {{ $lblPrintingDetails := cond $isEN "Details about printing" "Detalii despre tipărire" }}
+  {{ $contactURL := cond $isEN "/en/contact/" "/contact/" }}
+  {{ $printingURL := cond $isEN "/en/despre-tiparire/" "/despre-tiparire/" }}
+
+  <p class="print-subnote"><a href="{{ $printingURL }}">{{ $lblPrintingDetails }} →</a></p>
+
+  <section class="print-catalog">
+    {{ range $img := where (.Resources.ByType "image") "Params.hidden" "ne" true }}
+      {{ $thumb := $img.Filter (slice images.AutoOrient (images.Process "fit 900x900 q85")) }}
+      {{ $full := $img.Filter (slice images.AutoOrient (images.Process "fit 1800x1800 q88")) }}
+      {{ $title := $img.Title }}
+      {{ if eq $title $img.Name }}{{ $title = "" }}{{ end }}
+      <button type="button" class="print-card"
+        data-title="{{ $title }}"
+        data-edition="{{ $img.Params.edition }}"
+        data-formats="{{ $img.Params.formats }}"
+        data-price="{{ $img.Params.price_from }}"
+        data-paper="{{ $img.Params.paper }}"
+        data-full="{{ $full.RelPermalink }}">
+        <span class="print-card-img">
+          <img src="{{ $thumb.RelPermalink }}" alt="{{ $title }}" loading="lazy" width="{{ $thumb.Width }}" height="{{ $thumb.Height }}" />
+        </span>
+        <span class="print-card-meta">
+          {{ with $title }}<span class="print-title">{{ . }}</span>{{ end }}
+          {{ with $img.Params.edition }}<span class="print-edition">{{ . }}</span>{{ end }}
+        </span>
+      </button>
+    {{ end }}
+  </section>
+
+  {{ with .Content }}
+    <section class="prose">
+      {{ . }}
+    </section>
+  {{ end }}
+
+  <div id="print-modal" class="print-modal" hidden aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="print-modal-title">
+    <button type="button" class="print-modal-backdrop" aria-label="{{ $lblClose }}"></button>
+    <div class="print-modal-dialog">
+      <button type="button" class="print-modal-close" aria-label="{{ $lblClose }}">&times;</button>
+      <div class="print-modal-image-wrap">
+        <img class="print-modal-image" src="" alt="" />
+      </div>
+      <div class="print-modal-info">
+        <h3 id="print-modal-title" class="print-modal-title"></h3>
+        <p class="print-modal-edition"></p>
+        <dl class="print-modal-specs">
+          <dt>{{ $lblFormats }}</dt><dd class="print-modal-formats"></dd>
+          <dt>{{ $lblPaper }}</dt><dd class="print-modal-paper"></dd>
+          <dt>{{ $lblPrice }}</dt><dd class="print-modal-price"></dd>
+        </dl>
+        <a class="print-modal-cta" href="{{ $contactURL }}">{{ $lblRequest }} →</a>
+      </div>
+    </div>
+  </div>
+
+  <script>
+  (function() {
+    var modal = document.getElementById('print-modal');
+    if (!modal) return;
+    var img = modal.querySelector('.print-modal-image');
+    var title = modal.querySelector('.print-modal-title');
+    var edition = modal.querySelector('.print-modal-edition');
+    var formats = modal.querySelector('.print-modal-formats');
+    var paper = modal.querySelector('.print-modal-paper');
+    var price = modal.querySelector('.print-modal-price');
+    var specs = modal.querySelector('.print-modal-specs');
+
+    function setRow(dd, value) {
+      var dt = dd.previousElementSibling;
+      if (value) { dd.textContent = value; dd.style.display = ''; if (dt) dt.style.display = ''; }
+      else { dd.textContent = ''; dd.style.display = 'none'; if (dt) dt.style.display = 'none'; }
+    }
+
+    function open(card) {
+      img.src = card.dataset.full || '';
+      img.alt = card.dataset.title || '';
+      title.textContent = card.dataset.title || '';
+      edition.textContent = card.dataset.edition || '';
+      setRow(formats, card.dataset.formats);
+      setRow(paper, card.dataset.paper);
+      setRow(price, card.dataset.price);
+      modal.hidden = false;
+      modal.setAttribute('aria-hidden', 'false');
+      document.body.style.overflow = 'hidden';
+    }
+    function close() {
+      modal.hidden = true;
+      modal.setAttribute('aria-hidden', 'true');
+      document.body.style.overflow = '';
+      img.src = '';
+    }
+
+    document.querySelectorAll('.print-card').forEach(function(card) {
+      card.addEventListener('click', function() { open(card); });
+    });
+    modal.querySelector('.print-modal-backdrop').addEventListener('click', close);
+    modal.querySelector('.print-modal-close').addEventListener('click', close);
+    document.addEventListener('keydown', function(e) {
+      if (e.key === 'Escape' && !modal.hidden) close();
+    });
+  })();
+  </script>
+{{ end }}

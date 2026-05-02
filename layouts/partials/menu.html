@@ -1,0 +1,32 @@
+{{ $page := . }}
+{{ with site.Menus.main }}
+  <menu class="hidden" id="menu">
+    {{ range . }}
+      {{ $url := .URL }}
+      {{ $isLang := or (eq .Name "EN") (eq .Name "RO") }}
+      {{ if $isLang }}
+        {{ $targetLang := lower .Name }}
+        {{ range $page.AllTranslations }}
+          {{ if eq .Lang $targetLang }}{{ $url = .RelPermalink }}{{ end }}
+        {{ end }}
+      {{ end }}
+      <li itemscope itemtype="http://www.schema.org/SiteNavigationElement">
+        <a aria-current="{{ or (page.IsMenuCurrent .Menu .) (page.HasMenuCurrent .Menu .) }}" href="{{ $url }}"{{ if $isLang }} class="lang-switch"{{ end }} itemprop="url">
+          <span itemprop="name">{{ .Name }}</span>
+        </a>
+      </li>
+    {{ end }}
+  </menu>
+{{ end }}
+<script>
+(function(){
+  document.querySelectorAll('a.lang-switch').forEach(function(a){
+    a.addEventListener('click', function(e){
+      if (e.metaKey || e.ctrlKey || e.shiftKey || e.altKey || e.button !== 0) return;
+      e.preventDefault();
+      window.location.replace(a.href);
+    });
+  });
+})();
+</script>
+

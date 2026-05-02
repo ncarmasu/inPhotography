@@ -101,17 +101,17 @@ Pachete clare, livrabile predictibile. Fiecare proiect începe cu o discuție de
   </div>
 
   <div class="service-card">
-    <h3>Lansare produs & editorial brand</h3>
-    <p class="audience">Sesiuni concepute pentru comunicare integrată</p>
+    <h3>Printuri fine-art</h3>
+    <p class="audience">Pentru decor de birou, recepție, sală de board, cabinet sau hotel</p>
     <ul>
-      <li>Brief & moodboard împreună cu echipa de marketing</li>
-      <li>Sesiune produs și/sau lifestyle</li>
-      <li>Variante orientate pentru web, print, social</li>
-      <li>Cadre adaptate pentru formate diferite (1:1, 4:5, 16:9)</li>
-      <li>Drepturi de utilizare extinse</li>
+      <li>Lucrări selectate, în Open Edition și Limited Edition</li>
+      <li>Tipărire giclée pe hârtie de arhivă</li>
+      <li>Formate de la A3 la 70×100 cm sau custom</li>
+      <li>Opțional: passe-partout și ramare</li>
+      <li>Test print disponibil înainte de comanda finală</li>
     </ul>
     <p class="price">Preț la cerere</p>
-    <a class="cta" href="/contact/">Solicită ofertă →</a>
+    <a class="cta" href="/print/">Vezi galeria →</a>
   </div>
 
   <div class="service-card">

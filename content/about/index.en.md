@@ -25,15 +25,12 @@ description: Professional photographer based in Iași, available across Romania 
 
 Hi, I'm **Narcis**.
 
-I've been a professional photographer for **over 15 years**, focused on three complementary areas: **corporate events**, **portraits** and **street**. I build clean, polished images that fit naturally into a company's communication — from full coverage of conferences, product launches, galas and team buildings, to executive headshots and team profiles.
+I've been a professional photographer for **over 15 years**, focused on three complementary areas: **corporate events**, **portraits** and **fine-art prints**. I build clean, polished images that fit naturally into a company's communication — from full coverage of conferences, product launches, galas and team buildings, to executive headshots and team profiles.
 
-Across **100+ photo projects** delivered, I've worked with brands such as **Servier**, **Microsoft** and other multinational and local companies that need predictable visual communication, easy to integrate into campaigns.
+I've worked with both local and international companies that need predictable visual communication, easy to integrate into campaigns.
 
 I work discreetly, respect the event's agenda, and deliver edited material within agreed deadlines. Every project starts with a clear conversation about purpose, deliverables, usage rights and legal framework (including GDPR) — so the photos can be used with confidence wherever you need them.
 
 **Equipment**: professional Canon full-frame setup with a suitable set of prime and L-series zoom lenses, studio and portable lighting for indoor or on-location sessions. Full backup on every shoot.
-
-For quotes, briefs or collaborations:
-[inphotography@gmail.com](mailto:inphotography@gmail.com) · [WhatsApp](https://wa.me/40745560706)
 
 </div>

@@ -13,8 +13,17 @@
   </div>
   {{ if site.Menus.main }}
     <nav class="header-nav">
+      {{ $page := . }}
       {{ range site.Menus.main }}
-        <a href="{{ .URL }}">{{ .Name }}</a>
+        {{ $url := .URL }}
+        {{ $isLang := or (eq .Name "EN") (eq .Name "RO") }}
+        {{ if $isLang }}
+          {{ $targetLang := lower .Name }}
+          {{ range $page.AllTranslations }}
+            {{ if eq .Lang $targetLang }}{{ $url = .RelPermalink }}{{ end }}
+          {{ end }}
+        {{ end }}
+        <a href="{{ $url }}"{{ if $isLang }} class="lang-switch"{{ end }}>{{ .Name }}</a>
       {{ end }}
     </nav>
     <ul>

@@ -1,6 +1,6 @@
 ---
 title: Narcis — fotograf profesionist
-description: Fotograf profesionist — evenimente corporate, portrete și street.
+description: Fotograf profesionist — evenimente corporate, portrete și printuri fine-art.
 ---
 
 <style>
@@ -25,15 +25,12 @@ description: Fotograf profesionist — evenimente corporate, portrete și street
 
 Salut, sunt **Narcis**.
 
-Lucrez ca fotograf profesionist de **peste 15 ani**, cu accent pe trei direcții complementare: **evenimente corporate**, **portrete** și **street**. Construiesc imagini clare, decente, ușor de folosit în comunicarea unei companii — de la acoperire completă pentru conferințe, lansări de produs, gale și team buildings, la headshots executive și profile pentru echipă.
+Lucrez ca fotograf profesionist de **peste 15 ani**, cu accent pe trei direcții complementare: **evenimente corporate**, **portrete** și **printuri fine-art**. Construiesc imagini clare, decente, ușor de folosit în comunicarea unei companii — de la acoperire completă pentru conferințe, lansări de produs, gale și team buildings, la headshots executive și profile pentru echipă.
 
-În peste **100 de proiecte foto** livrate, am colaborat cu branduri precum **Servier**, **Microsoft** și alte companii multinaționale și locale care au nevoie de o comunicare vizuală predictibilă și ușor de integrat în campanii.
+De-a lungul timpului am colaborat cu organizații naționale și internaționale care au nevoie de o comunicare vizuală predictibilă și ușor de integrat în campanii.
 
 Lucrez discret, respect agendele unui eveniment și predau materialul editat în termenele convenite. Fiecare proiect începe cu o discuție clară despre scop, livrabile, drepturi de utilizare și cadru legal (inclusiv GDPR) — astfel încât pozele să fie folosite cu încredere, oriunde aveți nevoie de ele.
 
 **Echipament**: echipament Canon profesional full-frame, cu set adecvat de obiective prime și zoom-uri seria L, lumini de studio și mobile pentru sesiuni indoor sau on-location. Backup integral pe fiecare sesiune.
-
-Pentru cotații, briefuri sau colaborări:
-[inphotography@gmail.com](mailto:inphotography@gmail.com) · [WhatsApp](https://wa.me/40745560706)
 
 </div>

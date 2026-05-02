@@ -175,5 +175,177 @@
     text-align: center; font-size: 0.8rem; opacity: 0.55;
     display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;
   }
+
+  /* Print catalog (page /print) */
+  .print-subnote {
+    text-align: center;
+    margin: -0.5rem 0 0;
+    font-size: 0.92rem;
+    font-style: italic;
+    opacity: 0.75;
+  }
+  .print-subnote a { text-decoration: none; border-bottom: 1px solid currentColor; padding-bottom: 1px; }
+  .print-subnote a:hover { opacity: 0.7; }
+  .print-catalog {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem 1.75rem;
+    margin: 2.5rem auto 1rem;
+    max-width: 1280px;
+    width: 100%;
+  }
+  .print-card {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+    background: none;
+    border: none;
+    padding: 0;
+    text-align: left;
+    color: inherit;
+    cursor: pointer;
+    font: inherit;
+  }
+  .print-card-img {
+    display: block;
+    overflow: hidden;
+    background: #111;
+    aspect-ratio: 4 / 5;
+  }
+  .print-card-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: opacity .25s ease, transform .4s ease;
+    display: block;
+  }
+  .print-card:hover .print-card-img img,
+  .print-card:focus-visible .print-card-img img { opacity: .92; transform: scale(1.02); }
+  .print-card-meta { padding: 0 0.15rem; display: flex; flex-direction: column; gap: 0.2rem; }
+  .print-title {
+    font-family: "Cormorant Garamond", Georgia, serif;
+    font-weight: 400;
+    font-style: italic;
+    font-size: 1.4rem;
+    letter-spacing: 0.02em;
+    line-height: 1.2;
+  }
+  .print-edition {
+    font-size: 0.72rem;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    opacity: 0.65;
+  }
+
+  /* Print modal */
+  .print-modal[hidden] { display: none; }
+  .print-modal {
+    position: fixed; inset: 0; z-index: 1000;
+    display: flex; align-items: center; justify-content: center;
+    padding: 1.5rem;
+  }
+  .print-modal-backdrop {
+    position: absolute; inset: 0;
+    background: rgba(0,0,0,0.85);
+    backdrop-filter: blur(6px);
+    border: none; padding: 0; cursor: pointer;
+  }
+  .print-modal-dialog {
+    position: relative;
+    display: grid;
+    grid-template-columns: minmax(0, 1.6fr) minmax(280px, 1fr);
+    gap: 0;
+    max-width: 1100px;
+    width: 100%;
+    max-height: calc(100vh - 3rem);
+    background: #0a0a0a;
+    border: 1px solid rgba(255,255,255,0.1);
+    overflow: hidden;
+  }
+  .print-modal-image-wrap {
+    background: #000;
+    display: flex; align-items: center; justify-content: center;
+    overflow: hidden;
+    min-height: 50vh;
+  }
+  .print-modal-image {
+    max-width: 100%; max-height: calc(100vh - 3rem);
+    width: auto; height: auto;
+    object-fit: contain;
+    display: block;
+  }
+  .print-modal-info {
+    padding: 2rem 1.75rem;
+    display: flex; flex-direction: column;
+    overflow-y: auto;
+  }
+  .print-modal-title {
+    font-family: "Cormorant Garamond", Georgia, serif;
+    font-weight: 400; font-style: italic;
+    font-size: 2rem; line-height: 1.1;
+    margin: 0 0 0.5rem;
+    letter-spacing: 0.02em;
+  }
+  .print-modal-edition {
+    font-size: 0.78rem;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    opacity: 0.7;
+    margin: 0 0 1.5rem;
+  }
+  .print-modal-specs {
+    margin: 0 0 1.75rem;
+    display: grid;
+    grid-template-columns: max-content 1fr;
+    gap: 0.55rem 1.1rem;
+    font-size: 0.92rem;
+  }
+  .print-modal-specs dt {
+    opacity: 0.6;
+    font-size: 0.78rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    align-self: center;
+  }
+  .print-modal-specs dd { margin: 0; opacity: 0.95; align-self: center; }
+  .print-modal-cta {
+    display: inline-block;
+    padding: 0.75rem 1.25rem;
+    border: 1px solid currentColor;
+    border-radius: 6px;
+    text-decoration: none;
+    font-size: 0.95rem;
+    align-self: flex-start;
+    margin-top: auto;
+    transition: opacity .2s ease, background .2s ease, color .2s ease;
+  }
+  .print-modal-cta:hover {
+    background: #fafafa; color: #0a0a0a; opacity: 1;
+  }
+  .print-modal-close {
+    position: absolute;
+    top: 0.5rem; right: 0.5rem;
+    z-index: 2;
+    background: rgba(0,0,0,0.5);
+    color: #fafafa;
+    border: 1px solid rgba(255,255,255,0.15);
+    width: 2.25rem; height: 2.25rem;
+    border-radius: 50%;
+    font-size: 1.5rem; line-height: 1;
+    cursor: pointer;
+    display: flex; align-items: center; justify-content: center;
+    transition: background .2s ease;
+  }
+  .print-modal-close:hover { background: rgba(255,255,255,0.15); }
+  @media (max-width: 720px) {
+    .print-modal-dialog {
+      grid-template-columns: 1fr;
+      max-height: calc(100vh - 1rem);
+      overflow-y: auto;
+    }
+    .print-modal-image-wrap { min-height: 40vh; max-height: 55vh; }
+    .print-modal-info { padding: 1.5rem 1.25rem; }
+    .print-modal-title { font-size: 1.6rem; }
+  }
 </style>
 
