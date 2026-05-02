@@ -250,7 +250,12 @@
     .service-card__media { width: 38%; flex-shrink: 0; aspect-ratio: 1 / 1; }
     .service-card__body { padding: 0.9rem 1rem; }
     .service-card__title { font-size: 1.15rem; }
-    .service-card__desc { font-size: 0.85rem; }
+    .service-card__desc {
+      font-size: 0.85rem;
+      -webkit-line-clamp: unset;
+      display: block;
+      overflow: visible;
+    }
     .featured-portfolio .card figure { aspect-ratio: 4 / 3; }
     /* Slightly smaller arrow on mobile */
     .featured-portfolio .card figure::after,
