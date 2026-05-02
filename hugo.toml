@@ -55,17 +55,13 @@ theme = "gallery"
 
 [languages.ro.menu]
   [[languages.ro.menu.main]]
-    name = "Portofoliu"
-    url = "/portofoliu/"
-    weight = 5
-  [[languages.ro.menu.main]]
-    name = "Servicii"
-    url = "/servicii/"
-    weight = 7
+    name = "Pachete"
+    url = "/pachete/"
+    weight = 10
   [[languages.ro.menu.main]]
     name = "Despre"
-    url = "/about/"
-    weight = 10
+    url = "/despre/"
+    weight = 12
   [[languages.ro.menu.main]]
     name = "Contact"
     url = "/contact/"
@@ -77,17 +73,13 @@ theme = "gallery"
 
 [languages.en.menu]
   [[languages.en.menu.main]]
-    name = "Portfolio"
-    url = "/en/portofoliu/"
-    weight = 5
-  [[languages.en.menu.main]]
-    name = "Services"
-    url = "/en/servicii/"
-    weight = 7
+    name = "Packages"
+    url = "/en/packages/"
+    weight = 10
   [[languages.en.menu.main]]
     name = "About"
     url = "/en/about/"
-    weight = 10
+    weight = 12
   [[languages.en.menu.main]]
     name = "Contact"
     url = "/en/contact/"

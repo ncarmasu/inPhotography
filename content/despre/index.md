@@ -1,6 +1,6 @@
 ---
 title: Narcis — fotograf profesionist
-description: Fotograf profesionist — evenimente corporate, portrete și printuri fine-art.
+description: Evenimente corporate, portrete și printuri fine-art.
 ---
 
 <style>
@@ -25,7 +25,7 @@ description: Fotograf profesionist — evenimente corporate, portrete și printu
 
 Salut, sunt **Narcis**.
 
-Lucrez ca fotograf profesionist de **peste 15 ani**, cu accent pe trei direcții complementare: **evenimente corporate**, **portrete** și **printuri fine-art**. Construiesc imagini clare, decente, ușor de folosit în comunicarea unei companii — de la acoperire completă pentru conferințe, lansări de produs, gale și team buildings, la headshots executive și profile pentru echipă.
+Lucrez de **peste 15 ani**, cu accent pe trei direcții complementare: **evenimente corporate**, **portrete** și **printuri fine-art**. Construiesc imagini clare, decente, ușor de folosit în comunicarea unei companii — de la acoperire completă pentru conferințe, lansări de produs, gale și team buildings, la headshots executive și profile pentru echipă.
 
 De-a lungul timpului am colaborat cu organizații naționale și internaționale care au nevoie de o comunicare vizuală predictibilă și ușor de integrat în campanii.
 

@@ -1,5 +1,6 @@
 ---
 title: Prints
+url: /en/prints/
 layout: single
 date: 2026-05-01
 weight: 3

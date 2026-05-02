@@ -41,4 +41,4 @@ La cerere, pot oferi un *test print* (A4 sau A3, fără ramă) pentru a evalua h
 
 ---
 
-[← Înapoi la printuri](/print/) · [Solicită ofertă](/contact/)
+[← Înapoi la printuri](/printuri/) · [Solicită ofertă](/contact/)

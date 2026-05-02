@@ -1,6 +1,7 @@
 {{ define "main" }}
   {{ $portofoliu := .Site.GetPage "/portofoliu" }}
-  {{ $categories := where (where .Pages "Params.private" "ne" true) "RelPermalink" "ne" $portofoliu.RelPermalink }}
+  {{ $gallerySlugs := slice "/evenimente-corporate/" "/portrete/" "/printuri/" }}
+  {{ $isEN := eq .Site.Language.Lang "en" }}
 
   <section class="brand-hero">
     <img class="brand-logo" src="{{ "images/logo-combo-dark.svg" | relURL }}" alt="INPhotography" />
@@ -9,13 +10,36 @@
 
   {{ with $portofoliu }}
     <section class="featured-portfolio">
+      <div class="featured-portfolio__label">{{ cond $isEN "Recent work" "Lucrări recente" }}</div>
       {{ partial "album-card.html" . }}
     </section>
   {{ end }}
 
-  <section class="galleries categories-row">
-    {{ range $categories }}
-      {{ partial "album-card.html" . }}
-    {{ end }}
+  <section class="services-row">
+    <h2 class="services-row__heading">{{ cond $isEN "Services" "Servicii" }}</h2>
+    <div class="services-row__grid">
+      {{ range $gallerySlugs }}
+        {{ with site.GetPage . }}
+          <a class="service-card" href="{{ .RelPermalink }}">
+            {{ $gallery := partial "get-gallery.html" . }}
+            {{ with $gallery }}
+              {{ $featured := index .images 0 }}
+              {{ $covers := where .images "Params.cover" "eq" true }}
+              {{ if $covers }}{{ $featured = index $covers 0 }}{{ end }}
+              {{ if $featured }}
+                {{ $thumb := $featured.Filter (slice images.AutoOrient (images.Process "fit 800x800 q85")) }}
+                <figure class="service-card__media">
+                  <img class="lazyload" width="{{ $thumb.Width }}" height="{{ $thumb.Height }}" data-src="{{ $thumb.RelPermalink }}" alt="{{ $.Title }}" />
+                </figure>
+              {{ end }}
+            {{ end }}
+            <div class="service-card__body">
+              <h3 class="service-card__title">{{ .Title }}</h3>
+              {{ with .Description }}<p class="service-card__desc">{{ . }}</p>{{ end }}
+            </div>
+          </a>
+        {{ end }}
+      {{ end }}
+    </div>
   </section>
 {{ end }}

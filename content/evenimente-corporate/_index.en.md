@@ -1,5 +1,6 @@
 ---
 title: Corporate Events
+url: /en/corporate-events/
 layout: single
 date: 2026-05-01
 weight: 1

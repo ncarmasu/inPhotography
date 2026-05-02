@@ -1,6 +1,7 @@
 ---
 title: Narcis — professional photographer
-description: Professional photographer based in Iași, available across Romania — corporate events, headshots and portraiture.
+url: /en/about/
+description: Corporate events, headshots and fine-art prints.
 ---
 
 <style>
@@ -25,7 +26,7 @@ description: Professional photographer based in Iași, available across Romania 
 
 Hi, I'm **Narcis**.
 
-I've been a professional photographer for **over 15 years**, focused on three complementary areas: **corporate events**, **portraits** and **fine-art prints**. I build clean, polished images that fit naturally into a company's communication — from full coverage of conferences, product launches, galas and team buildings, to executive headshots and team profiles.
+I've been working for **over 15 years**, focused on three complementary areas: **corporate events**, **portraits** and **fine-art prints**. I build clean, polished images that fit naturally into a company's communication — from full coverage of conferences, product launches, galas and team buildings, to executive headshots and team profiles.
 
 I've worked with both local and international companies that need predictable visual communication, easy to integrate into campaigns.
 

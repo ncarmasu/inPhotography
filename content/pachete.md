@@ -1,5 +1,5 @@
 ---
-title: Servicii
+title: Pachete
 date: 2026-05-01
 description: Pachete foto pentru companii — evenimente, headshots, lansări, portrete personale.
 ---
@@ -68,8 +68,6 @@ description: Pachete foto pentru companii — evenimente, headshots, lansări, p
 }
 </style>
 
-Pachete clare, livrabile predictibile. Fiecare proiect începe cu o discuție de 15 minute — apoi ofertă cu drepturi de utilizare incluse.
-
 <div class="services-grid">
 
   <div class="service-card">
@@ -111,7 +109,7 @@ Pachete clare, livrabile predictibile. Fiecare proiect începe cu o discuție de
       <li>Test print disponibil înainte de comanda finală</li>
     </ul>
     <p class="price">Preț la cerere</p>
-    <a class="cta" href="/print/">Vezi galeria →</a>
+    <a class="cta" href="/printuri/">Vezi galeria →</a>
   </div>
 
   <div class="service-card">

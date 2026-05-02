@@ -1,5 +1,6 @@
 ---
-title: Services
+title: Packages
+url: /en/packages/
 date: 2026-05-01
 description: Photography packages for companies — events, headshots, launches, personal branding.
 ---
@@ -21,8 +22,6 @@ description: Photography packages for companies — events, headshots, launches,
 .services-cta-row .secondary { border: 1px solid currentColor; }
 @media (max-width: 720px) { .services-grid { grid-template-columns: 1fr; } }
 </style>
-
-Clear packages, predictable deliverables. Every project starts with a 15-minute conversation — followed by a quote with usage rights included.
 
 <div class="services-grid">
 
@@ -65,7 +64,7 @@ Clear packages, predictable deliverables. Every project starts with a 15-minute 
       <li>Test print available before final order</li>
     </ul>
     <p class="price">Price on request</p>
-    <a class="cta" href="/en/print/">View the gallery →</a>
+    <a class="cta" href="/en/prints/">View the gallery →</a>
   </div>
 
   <div class="service-card">

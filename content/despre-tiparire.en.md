@@ -41,4 +41,4 @@ On request, I can provide a *test print* (A4 or A3, unframed) so you can evaluat
 
 ---
 
-[← Back to prints](/en/print/) · [Request a quote](/en/contact/)
+[← Back to prints](/en/prints/) · [Request a quote](/en/contact/)

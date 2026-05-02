@@ -1,5 +1,6 @@
 ---
 title: Portraits
+url: /en/portraits/
 layout: single
 date: 2026-05-01
 weight: 2
