@@ -1,5 +1,5 @@
 <footer>
-  {{ $hideCta := or (eq .RelPermalink (relLangURL "contact/")) (eq .RelPermalink (relLangURL "servicii/")) }}
+  {{ $hideCta := or (eq .RelPermalink (relLangURL "contact/")) (eq .RelPermalink (relLangURL "servicii/")) (eq .RelPermalink "/pachete/") (eq .RelPermalink "/en/packages/") }}
   {{ if not $hideCta }}
   <section class="footer-cta">
     <p class="footer-cta-text">{{ if eq .Site.Language.Lang "en" }}Let's talk about your project{{ else }}Hai să povestim despre proiectul tău{{ end }}</p>

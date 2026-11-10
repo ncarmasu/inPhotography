@@ -80,18 +80,39 @@
 
   /* Hero brand wordmark */
   .brand-hero {
+    position: relative;
+    isolation: isolate;
     max-width: 1280px;
     margin: 1rem auto 1.5rem;
     padding: 0.5rem 1.5rem 1.5rem;
     text-align: center;
     font-family: "Cormorant Garamond", Georgia, serif;
   }
+  .brand-hero__identity {
+    position: relative;
+    max-width: 520px;
+    margin: 0 auto;
+  }
   .brand-hero .brand-logo {
+    position: relative;
+    z-index: 1;
     display: block;
-    margin: 0 auto 0.5rem;
+    margin: 0 auto;
     width: 100%;
     max-width: 520px;
     height: auto;
+  }
+  .brand-hero .brand-iris {
+    position: absolute;
+    z-index: 0;
+    left: 15%;
+    top: 50%;
+    transform: translate(-51.6%, -59.8%);
+    display: block;
+    width: min(45.9vw, 272px);
+    max-width: 75%;
+    height: auto;
+    pointer-events: none;
   }
   .brand-hero .brand-mark {
     position: relative;
@@ -117,7 +138,9 @@
   .brand-hero .brand-mark::before { right: 100%; }
   .brand-hero .brand-mark::after  { left:  100%; }
   .brand-hero .brand-tagline {
-    margin: 0.7rem 0 0;
+    position: relative;
+    z-index: 1;
+    margin: 1.6rem 0 0;
     font-style: italic;
     font-weight: 300;
     font-size: clamp(0.95rem, 1.4vw, 1.15rem);

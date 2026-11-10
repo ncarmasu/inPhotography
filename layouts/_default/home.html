@@ -4,7 +4,10 @@
   {{ $isEN := eq .Site.Language.Lang "en" }}
 
   <section class="brand-hero">
-    <img class="brand-logo" src="{{ "images/logo-combo-dark.svg" | relURL }}" alt="INPhotography" />
+    <div class="brand-hero__identity">
+      <img class="brand-iris" src="{{ "images/iris-mark.png" | relURL }}?v=20261110i" alt="" aria-hidden="true" />
+      <img class="brand-logo" src="{{ "images/logo-combo-dark.svg" | relURL }}?v=20261110g" alt="INPhotography" />
+    </div>
     <p class="brand-tagline">{{ .Site.Params.description | default .Site.Title }}</p>
   </section>
 
